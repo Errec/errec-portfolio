@@ -1,0 +1,27 @@
+{
+  "name": "errec-portfolio",
+  "description": "My personal portfolio created with sass and pug",
+  "main": "gulpfile.js",
+  "authors": [
+    "Raniro Coelho"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "projects",
+    "skills"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
