@@ -91,7 +91,7 @@ gulp.task('default', function() {
 
 gulp.task('watch', function(){
   gulp.watch('styles/**/*',                        ['styles']);
-  gulp.watch(['templates/**/*.pug', './*.pug'],  ['templates']);
+  gulp.watch(['templates/**/*.pug', './*.pug'],    ['templates']);
   gulp.watch('js/*.js',                            ['scripts']);
   gulp.watch('img/**/*',                           ['images']);
 
