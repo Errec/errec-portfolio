@@ -1,5 +1,7 @@
 header.header
-  a.header__logo Errec
+  span.header__logo-svg
+    include header__icon.pug
+  span.header__logo-name(aria-label="eheek") Errec
   div.header__nav-container
     nav.header__nav
       ul.header__row
@@ -8,4 +10,4 @@ header.header
         li.header__list
           a projects
         li.header__list
-          a conts
+          a contact
