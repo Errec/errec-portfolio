@@ -1,4 +1,8 @@
+@import 'variables/_base.scss'
 @import 'modules/normalize.scss'
 @import 'modules/reset.scss'
 @import '/js/vendor/bootstrap/dist/css/bootstrap.css'
 @import '/js/vendor/bootstrap/dist/css/bootstrap-theme.css'
+
+body
+ background-color: $color__dark
