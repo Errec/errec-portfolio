@@ -4,5 +4,7 @@
 @import '/js/vendor/bootstrap/dist/css/bootstrap.css'
 @import '/js/vendor/bootstrap/dist/css/bootstrap-theme.css'
 
-body
- background-color: $color__dark
+@import 'assets/header.sass'
+
+body, html
+  background-color: $color__dark
