@@ -6,5 +6,6 @@
 
 @import 'assets/header.sass'
 
-body, html
-  background-color: $color__dark
+body
+  color: $color__light
+  background-color: grey
