@@ -6,6 +6,11 @@
 
 @import 'assets/header.sass'
 
-body
-  color: $color__light
+/* apply a natural box layout model to all elements, but allowing components to change */
+html, body
   background-color: grey
+  box-sizing: border-box
+  color: $color__light
+
+*, *:before, *:after
+  box-sizing: inherit
