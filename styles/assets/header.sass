@@ -1,6 +1,5 @@
 .header
   position: absolute
-  background-color: blue
   left: $padding-lr__lg
   right: $padding-lr__lg
   top: $padding-bt__lg
@@ -21,7 +20,21 @@
   display: inline-block
   margin-left: $padding-lr__lg
   a
-    color: inherit
+    color: #7A7A7A
     letter-spacing: 0.2em
     text-decoration: none
+    transition: all 0.25s ease-in-out 0.001s
+    &:hover
+      color: $color__light
+    &:hover > .header__list--underline
+      width: 100%
+      background-color: $color__light
+
+.header__list--underline
+  background-color: #7A7A7A
+  margin-top: 0.1em
+  height: 1px
+  width: 0
+  transition: all 0.25s ease-in-out
+
 
