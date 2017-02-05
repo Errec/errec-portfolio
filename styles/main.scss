@@ -16,3 +16,5 @@ html, body
 // aply border-box to all elements
 *, *:before, *:after
   box-sizing: inherit
+
+@import 'media/max-width720.sass'
