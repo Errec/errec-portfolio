@@ -1,4 +1,4 @@
-@import 'variables/_base.scss'
+@import 'variables/_base.sass'
 @import 'modules/normalize.scss'
 @import 'modules/reset.scss'
 @import '/js/vendor/bootstrap/dist/css/bootstrap.css'
@@ -9,12 +9,13 @@
 
 html, body
   background-color: $color__dark
-  // background-color: grey
   box-sizing: border-box
   color: $color__light
   font-size: $font__size
+  font-family: "Amatic SC", serif
+  font-weight: 100
 
-// aply border-box to all elements
+
 *, *:before, *:after
   box-sizing: inherit
 
