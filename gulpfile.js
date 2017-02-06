@@ -90,6 +90,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('watch', function(){
+  gulp.start('styles', 'templates', 'scripts', 'images');
   gulp.watch('styles/**/*',                        ['styles']);
   gulp.watch(['templates/**/*.pug', './*.pug'],    ['templates']);
   gulp.watch('js/*.js',                            ['scripts']);
