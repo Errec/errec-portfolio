@@ -6,6 +6,7 @@
 
 @import 'assets/header.sass'
 @import 'assets/main-slogan.sass'
+@import 'assets/main-hero.sass'
 
 html, body
   background-color: $color__dark
@@ -14,7 +15,7 @@ html, body
   font-size: $font__size
   font-family: "Amatic SC", serif
   font-weight: 100
-
+  overflow-x: hidden
 
 *, *:before, *:after
   box-sizing: inherit
