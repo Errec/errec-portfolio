@@ -7,6 +7,7 @@
 @import 'assets/header.sass'
 @import 'assets/main-slogan.sass'
 @import 'assets/main-hero.sass'
+@import 'assets/main-skills.sass'
 
 html, body
   background-color: $color__dark
@@ -19,5 +20,9 @@ html, body
 
 *, *:before, *:after
   box-sizing: inherit
+
+.main
+  padding-top: 200px
+
 
 @import 'media/max-width720.sass'
