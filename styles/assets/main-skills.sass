@@ -1,27 +1,26 @@
-.main-kills
-  display: block
-
 .main-skills
   background-color: $color__light
   color: $color__dark
+  display: block
 
 .main-skills__title
+  -webkit-margin-before: 0
   font-size: 3rem
-  padding-left: $padding-lr__lg
   margin-bottom: $padding-bt__md
+  padding: 0 $padding-lr__lg $padding-bt__lg $padding-lr__lg
 
 .main-skills__grid
-  list-style: none
+  align-items: center
   display: flex
   flex-wrap: wrap
-  align-items: center
-  justify-content: center
-  padding: $padding-bt__md $padding-lr__sm $padding-bt__lg $padding-lr__sm
+  justify-content: space-between
+  list-style: none
+  padding-left: 0
 
 .main-skills__item
   min-width: 120px
   min-height: 120px
-  margin: 0 $padding-lr__lg*1.5 $padding-bt__md $padding-lr__lg*1.5
+  margin: 0 $padding-lr__lg*1.5 $padding-bt__md*2 $padding-lr__lg*1.5
   font-size: 6rem
 
 .main-skills__svg--fill
