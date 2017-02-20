@@ -20,5 +20,9 @@ html, body
 *, *:before, *:after
   box-sizing: inherit
 
+h1, h2, h3, h4
+  margin: 0
+  padding: 0
+
 @import 'media/max-width720.sass'
 @import 'media/min-width-1540.sass'
