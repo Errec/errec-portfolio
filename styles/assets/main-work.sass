@@ -9,15 +9,37 @@
 .main-work__grid
   display: flex
   flex-wrap: wrap
-  justify-content: center
   list-style: none
   padding-left: 0
 
 .main-work__item
   max-width: 33.33333%
   width: 33.33333%
+  height: 700px
+  transition: all 1s ease-in-out 0.1s
 
 .main-work__img
   height: 100%
   width: 100%
   object-fit: cover
+
+.main-work__grid:hover > li
+  width: 0
+  max-width: 0
+
+.main-work__grid li:hover
+  width: 100%
+  max-width: 100%
+
+#wli-1
+  flex: 100
+#wli-2
+  flex: 85
+#wli-3
+  flex: 65
+#wli-4
+  flex: 55
+#wli-5
+  flex: 50
+#wli-6
+  flex: 35
