@@ -8,3 +8,15 @@ for (var i = 0; i < skillIcons.length; i++) {
     this.children[0].classList.add("main-skills__svg--fill");
 };
 }
+
+window.addEventListener('scroll', function(e){
+  rightHand = document.getElementById('right-hand');
+  pageHeight = window.pageYOffset;
+  if( pageHeight > 350 && pageHeight < 400) {
+    rightHand.style.transform = 'rotate(-1deg)';
+    rightHand.style.marginTop = '-15%';
+    rightHand.style.marginRight = '-6%';
+    console.log(window.pageYOffset);
+    console.log(rightHand.style);
+  }
+}, false);
