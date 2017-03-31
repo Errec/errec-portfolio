@@ -11,11 +11,16 @@ for (var i = 0; i < skillIcons.length; i++) {
 
 window.addEventListener('scroll', function(e){
   rightHand = document.getElementById('right-hand');
-  pageHeight = window.pageYOffset;
-  if( pageHeight > 350 && pageHeight < 400) {
+  leftHand = document.getElementById('left-hand');
+  height = window.pageYOffset;
+  if( height > 450 && height < 500) {
     rightHand.style.transform = 'rotate(-1deg)';
-    rightHand.style.marginTop = '-15%';
-    rightHand.style.marginRight = '-6%';
+    rightHand.style.marginTop = '-7%';
+    rightHand.style.marginRight = '-2%';
+    leftHand.style.transform = 'rotate(-15deg)';
+    leftHand.style.marginTop = '-2%';
+    leftHand.style.marginLeft = '-2%';
+
     console.log(window.pageYOffset);
     console.log(rightHand.style);
   }
