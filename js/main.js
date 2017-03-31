@@ -20,8 +20,6 @@ window.addEventListener('scroll', function(e){
     leftHand.style.transform = 'rotate(-15deg)';
     leftHand.style.marginTop = '-2%';
     leftHand.style.marginLeft = '-2%';
-
-    console.log(window.pageYOffset);
-    console.log(rightHand.style);
   }
+    // console.log(window.pageYOffset);
 }, false);
