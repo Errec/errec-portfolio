@@ -1,9 +1,11 @@
-var skillIcons = document.getElementsByClassName("main-skills__svg");
-var rightHand  = document.getElementById('right-hand');
-var leftHand   = document.getElementById('left-hand');
-var heroSection       = document.getElementById('hero');
-var workSection       = document.getElementById('work');
-var TH         = false; // transformHero() flag
+var skillIcons  = document.getElementsByClassName("main-skills__svg");
+var rightHand   = document.getElementById('right-hand');
+var leftHand    = document.getElementById('left-hand');
+var heroSection = document.getElementById('hero');
+var workSection = document.getElementById('work');
+var heroHeight  = heroSection.getBoundingClientRect().top + window.scrollY;
+var workHeight  = workSection.getBoundingClientRect().top + window.scrollY;
+var TH          = false; // transformHero() flag
 
 for (var i = 0; i < skillIcons.length; i++) {
   skillIcons[i].onmouseover = function(e) {
@@ -14,12 +16,13 @@ for (var i = 0; i < skillIcons.length; i++) {
 };
 }
 
+window.addEventListener('resize', function(e){
+  heroHeight = heroSection.getBoundingClientRect().top + window.scrollY;
+  workHeight = workSection.getBoundingClientRect().top + window.scrollY;
+});
+
 window.addEventListener('scroll', function(e){
   var currentHeight     = window.pageYOffset;
-  var heroHeight = heroSection.getBoundingClientRect().top + window.scrollY;
-  var workHeight = workSection.getBoundingClientRect().top + window.scrollY;
-  // console.log(hero.clientHeight - currentHeight);
-  // console.log(hero.getBoundingClientRect().top + window.scrollY);
 
   if(heroHeight - currentHeight < 200 && TH === false) {
     transformHero();
@@ -27,7 +30,6 @@ window.addEventListener('scroll', function(e){
   if (window.innerWidth < 720 && workHeight - currentHeight < 0) {
     transformWorkGrid();
   }
-    // console.log(window.pageYOffset);
 }, false);
 
 function transformHero() {
@@ -41,5 +43,6 @@ function transformHero() {
 }
 
 function transformWorkGrid() {
-
+/*  var workGrid = document.getElementsByClassName('main-work__item');
+  itemsHeightFromTop[0] = workSection.getBoundingClientRect().top + window.scrollY;*/
 }
