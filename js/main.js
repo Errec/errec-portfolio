@@ -1,8 +1,9 @@
 var skillIcons = document.getElementsByClassName("main-skills__svg");
 var rightHand  = document.getElementById('right-hand');
 var leftHand   = document.getElementById('left-hand');
-var hero   = document.getElementById('hero');
-var TH = false; // transformHero() flag
+var heroSection       = document.getElementById('hero');
+var workSection       = document.getElementById('work');
+var TH         = false; // transformHero() flag
 
 for (var i = 0; i < skillIcons.length; i++) {
   skillIcons[i].onmouseover = function(e) {
@@ -15,12 +16,16 @@ for (var i = 0; i < skillIcons.length; i++) {
 
 window.addEventListener('scroll', function(e){
   var currentHeight     = window.pageYOffset;
-  var heroHeight = hero.getBoundingClientRect().top + window.scrollY;
+  var heroHeight = heroSection.getBoundingClientRect().top + window.scrollY;
+  var workHeight = workSection.getBoundingClientRect().top + window.scrollY;
   // console.log(hero.clientHeight - currentHeight);
   // console.log(hero.getBoundingClientRect().top + window.scrollY);
 
   if(heroHeight - currentHeight < 200 && TH === false) {
     transformHero();
+  }
+  if (window.innerWidth < 720 && workHeight - currentHeight < 0) {
+    transformWorkGrid();
   }
     // console.log(window.pageYOffset);
 }, false);
@@ -33,4 +38,8 @@ function transformHero() {
   leftHand.style.transform = 'rotate(-15deg)';
   leftHand.style.marginTop = '-2%';
   leftHand.style.marginLeft = '-2%';
+}
+
+function transformWorkGrid() {
+
 }
