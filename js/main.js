@@ -30,7 +30,7 @@ window.addEventListener('scroll', function(e){
     transformHero();
   }
   if (window.innerWidth < 720 && workYPosition - currentYPosition < 0) {
-    transformWorkGrid();
+    transformWorkGrid(currentYPosition);
   }
 }, false);
 
@@ -44,8 +44,10 @@ function transformHero() {
   leftHand.style.marginLeft   = '-2%';
 }
 
-function transformWorkGrid() {
+function transformWorkGrid(currentYPosition) {
   workItemsYPosition = Array.from(workItems).map(function(entry) {
-    return document.getElementById(entry.id).getBoundingClientRect().top + window.scrollY;
-  });
+    return Math.abs(document.getElementById(entry.id).getBoundingClientRect().top + window.scrollY - currentYPosition);
+  }); // Arr with abs values of the distance between every grid item from the top of the window
+  var min = Math.min.apply(null, workItemsYPosition);
+  var minIndex = workItemsYPosition.indexOf(min);
 }
