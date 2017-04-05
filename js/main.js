@@ -1,11 +1,15 @@
 var skillIcons  = document.getElementsByClassName("main-skills__svg");
+var workItems   = document.getElementsByClassName('main-work__item');
 var rightHand   = document.getElementById('right-hand');
 var leftHand    = document.getElementById('left-hand');
 var heroSection = document.getElementById('hero');
 var workSection = document.getElementById('work');
-var heroHeight  = heroSection.getBoundingClientRect().top + window.scrollY;
-var workHeight  = workSection.getBoundingClientRect().top + window.scrollY;
+var heroYPosition  = heroSection.getBoundingClientRect().top + window.scrollY;
+var workYPosition  = workSection.getBoundingClientRect().top + window.scrollY;
+var workItemsYPosition = [];
 var TH          = false; // transformHero() flag
+
+checkWorkItemsYPosition();
 
 for (var i = 0; i < skillIcons.length; i++) {
   skillIcons[i].onmouseover = function(e) {
@@ -17,17 +21,18 @@ for (var i = 0; i < skillIcons.length; i++) {
 }
 
 window.addEventListener('resize', function(e){
-  heroHeight = heroSection.getBoundingClientRect().top + window.scrollY;
-  workHeight = workSection.getBoundingClientRect().top + window.scrollY;
+  heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
+  workYPosition = workSection.getBoundingClientRect().top + window.scrollY;
+  checkWorkItemsYPosition();
 });
 
 window.addEventListener('scroll', function(e){
-  var currentHeight     = window.pageYOffset;
+  var currentYPosition = window.pageYOffset;
 
-  if(heroHeight - currentHeight < 200 && TH === false) {
+  if(heroYPosition - currentYPosition < 200 && TH === false) {
     transformHero();
   }
-  if (window.innerWidth < 720 && workHeight - currentHeight < 0) {
+  if (window.innerWidth < 720 && workYPosition - currentYPosition < 0) {
     transformWorkGrid();
   }
 }, false);
@@ -43,6 +48,11 @@ function transformHero() {
 }
 
 function transformWorkGrid() {
-/*  var workGrid = document.getElementsByClassName('main-work__item');
-  itemsHeightFromTop[0] = workSection.getBoundingClientRect().top + window.scrollY;*/
+  // itemsYPositionFromTop[0] = workSection.getBoundingClientRect().top + window.scrollY;
+}
+
+function checkWorkItemsYPosition() {
+  workItemsYPosition = Array.from(workItems).map(function(entry) {
+    return document.getElementById(entry.id).getBoundingClientRect().top + window.scrollY;
+  });
 }
