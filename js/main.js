@@ -8,6 +8,7 @@ var heroYPosition      = heroSection.getBoundingClientRect().top + window.scroll
 var workYPosition      = workSection.getBoundingClientRect().top + window.scrollY;
 var workItemsYPosition = [];
 var TH                 = false; // transformHero() flag
+var TW                 = false; // transformWorkGrid() flag
 
 for (var i = 0; i < skillIcons.length; i++) {
   skillIcons[i].onmouseover = function(e) {
@@ -17,6 +18,10 @@ for (var i = 0; i < skillIcons.length; i++) {
     this.children[0].classList.add("main-skills__svg--fill");
 };
 }
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 window.addEventListener('resize', function(e){
   heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
@@ -29,7 +34,7 @@ window.addEventListener('scroll', function(e){
   if(heroYPosition - currentYPosition < 200 && TH === false) {
     transformHero();
   }
-  if (window.innerWidth < 720 && workYPosition - currentYPosition < 0) {
+  if (window.innerWidth < 720 && workYPosition - currentYPosition < 50 && TW === false) {
     transformWorkGrid(currentYPosition);
   }
 }, false);
@@ -49,5 +54,10 @@ function transformWorkGrid(currentYPosition) {
     return Math.abs(document.getElementById(entry.id).getBoundingClientRect().top + window.scrollY - currentYPosition);
   }); // Arr with abs values of the distance between every grid item from the top of the window
   var min = Math.min.apply(null, workItemsYPosition);
-  var minIndex = workItemsYPosition.indexOf(min);
+  var topDivId = 'wli-' + workItemsYPosition.indexOf(min);
+  document.getElementById(topDivId).style.height = '35vh';
+  document.getElementById(topDivId).style.filter = 'none';
+  if (topDivId === 'wli-4') {
+    TW = true;
+  }
 }
