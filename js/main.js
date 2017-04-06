@@ -26,6 +26,14 @@ window.onbeforeunload = function () {
 window.addEventListener('resize', function(e){
   heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
   workYPosition = workSection.getBoundingClientRect().top + window.scrollY;
+  if (window.innerWidth < 720 && (TW.reduce(add, 0)) !== 0) {
+    TW = [0, 0, 0, 0, 0];
+    var gridItem = document.getElementsByClassName("main-work__item");
+    for(var i = 0; i < gridItem.length; i++) {
+     gridItem[i].style.height = '8vh';
+     gridItem[i].style.filter = 'grayscale(1)';
+    }
+  }
 });
 
 window.addEventListener('scroll', function(e){
@@ -55,11 +63,10 @@ function transformWorkGrid(currentYPosition) {
   }); // Arr with abs values of the distance between every grid item from the top of the window
   var min = Math.min.apply(null, workItemsYPosition);
   var divSufix = workItemsYPosition.indexOf(min);
-  var topDivId = 'wli-' + divSufix;
-  document.getElementById(topDivId).style.height = '30vh';
-  document.getElementById(topDivId).style.filter = 'none';
+  var topGridItemID = 'wli-' + divSufix;
+  document.getElementById(topGridItemID).style.height = '30vh';
+  document.getElementById(topGridItemID).style.filter = 'none';
   TW[divSufix] = 1;
-  console.log('hey ' + divSufix);
 }
 
 function add(a, b) {
