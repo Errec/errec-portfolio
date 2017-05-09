@@ -39,7 +39,7 @@ window.addEventListener('resize', function(e){
 window.addEventListener('scroll', function(e){
   var currentYPosition = window.pageYOffset;
 
-  if(heroYPosition - currentYPosition < 200 && TH === false) {
+  if(heroYPosition - currentYPosition < 300 && TH === false) {
     transformHero();
   }
   if (window.innerWidth < 720 && workYPosition - currentYPosition < 50 && (TW.reduce(add, 0)) < 5) {
@@ -49,12 +49,12 @@ window.addEventListener('scroll', function(e){
 
 function transformHero() {
   TH = true;
-  rightHand.style.transform   = 'rotate(-1deg)';
-  rightHand.style.marginTop   = '-7%';
-  rightHand.style.marginRight = '-2%';
-  leftHand.style.transform    = 'rotate(-15deg)';
-  leftHand.style.marginTop    = '-2%';
+  leftHand.style.transform    = 'rotate(-5deg)';
+  leftHand.style.marginTop    = '-4%';
   leftHand.style.marginLeft   = '-2%';
+  rightHand.style.transform   = 'rotate(5deg)';
+  rightHand.style.marginTop   = '-7%';
+  rightHand.style.marginRight = '-6%';
 }
 
 function transformWorkGrid(currentYPosition) {
