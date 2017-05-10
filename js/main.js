@@ -19,10 +19,10 @@ for (var i = 0; i < skillIcons.length; i++) {
 };
 }
 
-window.onbeforeunload = function () {
+/*window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
+*/
 window.addEventListener('resize', function(e){
   heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
   workYPosition = workSection.getBoundingClientRect().top + window.scrollY;

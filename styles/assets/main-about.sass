@@ -21,12 +21,12 @@
   display: flex
   flex-direction: column
   > *
-    background-color: $color__light
-    color: $color__dark
+    background-color: $color__dark
+    color: $color__light
     padding: 0 8px
     border-radius: 3px
     margin: 8px 0
-    border: solid $color__light 1px
+    border: solid $color__light 2px
   .field-input
     flex: 1
     font-size: 0.8rem
@@ -34,15 +34,15 @@
     letter-spacing: 0.1rem
     flex: 1.4
     width: 25%
-    color: $color__dark
+    color: $color__light
     font-weight: bold
     border: none
     border: 1px solid $color__light
     transition: all 0.1s ease-in-out
     &:hover
-      background-color: $color__dark
-      color: $color__light
-      border: 1px solid $color__light
+      background-color: $color__light
+      color: $color__dark
+      // border: 1px solid $color__light
 
   .textarea-input
     padding-top: 4px
