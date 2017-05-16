@@ -22,6 +22,7 @@ html, body
   box-sizing: inherit
 
 h1, h2, h3, h4
+  pointer-events: none
   margin: 0
   padding: 0
   -webkit-margin-before: 0.83em
