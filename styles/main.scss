@@ -2,13 +2,8 @@
 @import 'modules/normalize.scss'
 @import 'modules/reset.scss'
 
-@import 'assets/header.sass'
-@import 'assets/main-slogan.sass'
-@import 'assets/main-hero.sass'
-@import 'assets/main-skills.sass'
-@import 'assets/main-work.sass'
-@import 'assets/main-about.sass'
-@import 'assets/footer.sass'
+*, *:before, *:after
+  box-sizing: inherit
 
 html, body
   box-sizing: border-box
@@ -19,9 +14,6 @@ html, body
   font-weight: 100
   overflow-x: hidden
 
-*, *:before, *:after
-  box-sizing: inherit
-
 h1, h2, h3, h4
   pointer-events: none
   margin: 0
@@ -30,6 +22,14 @@ h1, h2, h3, h4
   -webkit-margin-after: 0.83em
   -webkit-margin-start: 0px
   -webkit-margin-end: 0px
+
+@import 'assets/header.sass'
+@import 'assets/main-slogan.sass'
+@import 'assets/main-hero.sass'
+@import 'assets/main-skills.sass'
+@import 'assets/main-work.sass'
+@import 'assets/main-about.sass'
+@import 'assets/footer.sass'
 
 @import 'media/max-width-720.sass'
 @import 'media/min-width-1540.sass'
