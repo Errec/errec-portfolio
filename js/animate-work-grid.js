@@ -20,6 +20,7 @@ var workGridAnimation = (function(){
     }
   });
 
+  //  Bind scroll window event
   window.addEventListener('scroll', function(e){
     var currentYPosition = window.pageYOffset;
     if (window.innerWidth < 720 && workYPosition - currentYPosition < 50 && (TW.reduce(_add, 0)) < 5) {
