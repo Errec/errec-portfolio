@@ -4,6 +4,7 @@ var workGridAnimation = (function(){
   var workSection        = document.getElementById('work');
 
   var workItemsYPosition = [];
+  var regClassName       = new RegExp('(^| )'+ 'main-work__item--grow' +'($| )','g');
   var workYPosition      = workSection.getBoundingClientRect().top + window.scrollY;
   var zeroArr            = new Array(workItems.length+1).join('0').split('').map(parseFloat);
   var TW                 = zeroArr; // transformWorkGrid() flag array
@@ -15,8 +16,7 @@ var workGridAnimation = (function(){
       TW = new Array(workItems.length+1).join('0').split('').map(parseFloat);
       var gridItem = document.getElementsByClassName("main-work__item");
       for(var i = 0; i < gridItem.length; i++) {
-       gridItem[i].style.height = '8vh';
-       gridItem[i].style.filter = 'grayscale(1)';
+       gridItem[i].className = gridItem[i].className.replace(regClassName,' ');
       }
     }
   });
@@ -36,9 +36,10 @@ var workGridAnimation = (function(){
     var min = Math.min.apply(null, workItemsYPosition);
     var divSufix = workItemsYPosition.indexOf(min);
     var topGridItemID = 'wli-' + divSufix;
-    document.getElementById(topGridItemID).style.height = '30vh';
-    document.getElementById(topGridItemID).style.filter = 'none';
-    TW[divSufix] = 1;
+    if (TW[divSufix] !== 1) {
+      document.getElementById(topGridItemID).className += " main-work__item--grow";
+      TW[divSufix] = 1;
+    }
   }
 
   function _add(a, b) {
