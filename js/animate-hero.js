@@ -1,11 +1,11 @@
 var heroAnimation = (function(){
   // Cache the DOM
-  var rightHand          = document.getElementById('right-hand');
-  var leftHand           = document.getElementById('left-hand');
-  var heroSection        = document.getElementById('hero');
+  var rightHand   = document.getElementById('right-hand');
+  var leftHand    = document.getElementById('left-hand');
+  var heroSection = document.getElementById('hero');
 
-  var heroYPosition      = heroSection.getBoundingClientRect().top + window.scrollY;
-  var TH                 = false; // _transformHero() flag
+  var heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
+  var TH            = false; // _transformHero() flag
 
   //  Bind resize window event
   window.addEventListener('resize', function(e){
