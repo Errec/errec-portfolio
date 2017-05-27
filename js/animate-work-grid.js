@@ -5,13 +5,14 @@ var workGridAnimation = (function(){
 
   var workItemsYPosition = [];
   var workYPosition      = workSection.getBoundingClientRect().top + window.scrollY;
-  var TW                 = new Array(workItems.length+1).join('0').split('').map(parseFloat); // transformWorkGrid() flag array
+  var zeroArr            = new Array(workItems.length+1).join('0').split('').map(parseFloat);
+  var TW                 = zeroArr; // transformWorkGrid() flag array
 
   //  Bind resize window event
   window.addEventListener('resize', function(e){
     workYPosition = workSection.getBoundingClientRect().top + window.scrollY;
     if (window.innerWidth < 720 && (TW.reduce(_add, 0)) !== 0) {
-      TW = [0, 0, 0, 0, 0];
+      TW = new Array(workItems.length+1).join('0').split('').map(parseFloat);
       var gridItem = document.getElementsByClassName("main-work__item");
       for(var i = 0; i < gridItem.length; i++) {
        gridItem[i].style.height = '8vh';
