@@ -22,11 +22,7 @@ var heroAnimation = (function(){
 
   function _transformHero() {
     TH = true;
-    leftHand.style.transform    = 'rotate(-5deg)';
-    leftHand.style.marginTop    = '-4%';
-    leftHand.style.marginLeft   = '-2%';
-    rightHand.style.transform   = 'rotate(5deg)';
-    rightHand.style.marginTop   = '-7%';
-    rightHand.style.marginRight = '-6%';
+    leftHand.className += " main-hero__left-hand--move";
+    rightHand.className += " main-hero__right-hand--move";
   }
 })();
