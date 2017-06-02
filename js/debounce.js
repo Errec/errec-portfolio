@@ -21,11 +21,11 @@ function debounce(func, wait, options) {
   if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
-  wait = toNumber(wait) || 0;
-  if (isObject(options)) {
+  wait = Number(wait) || 0;
+  if (typeof options === 'object') {
     leading = !!options.leading;
     maxing = 'maxWait' in options;
-    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    maxWait = maxing ? nativeMax(Number(options.maxWait) || 0, wait) : maxWait;
     trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
 
@@ -68,7 +68,7 @@ function debounce(func, wait, options) {
   }
 
   function timerExpired() {
-    var time = now();
+    var time = Date.now();
     if (shouldInvoke(time)) {
       return trailingEdge(time);
     }
@@ -97,11 +97,11 @@ function debounce(func, wait, options) {
   }
 
   function flush() {
-    return timerId === undefined ? result : trailingEdge(now());
+    return timerId === undefined ? result : trailingEdge(Date.now());
   }
 
   function debounced() {
-    var time = now(),
+    var time = Date.now(),
         isInvoking = shouldInvoke(time);
 
     lastArgs = arguments;
