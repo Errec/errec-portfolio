@@ -25,7 +25,7 @@ function debounce(func, wait, options) {
   if (typeof options === 'object') {
     leading = !!options.leading;
     maxing = 'maxWait' in options;
-    maxWait = maxing ? nativeMax(Number(options.maxWait) || 0, wait) : maxWait;
+    maxWait = maxing ? Math.max(Number(options.maxWait) || 0, wait) : maxWait;
     trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
 
@@ -53,7 +53,7 @@ function debounce(func, wait, options) {
         timeSinceLastInvoke = time - lastInvokeTime,
         result = wait - timeSinceLastCall;
 
-    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+    return maxing ? Math.min(result, maxWait - timeSinceLastInvoke) : result;
   }
 
   function shouldInvoke(time) {
