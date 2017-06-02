@@ -1,7 +1,7 @@
 var workGridAnimation = (function(){
   // Cache the DOM
-  var workItems          = document.getElementsByClassName('main-work__item');
-  var workSection        = document.getElementById('work');
+  var workItems   = document.getElementsByClassName('main-work__item');
+  var workSection = document.getElementById('work');
 
   var workItemsYPosition = [];
   var regClassName       = new RegExp('(^| )'+ 'main-work__item--grow' +'($| )','g');
@@ -16,7 +16,7 @@ var workGridAnimation = (function(){
       TW = new Array(workItems.length+1).join('0').split('').map(parseFloat);
       var gridItem = document.getElementsByClassName("main-work__item");
       for(var i = 0; i < gridItem.length; i++) {
-       gridItem[i].className = gridItem[i].className.replace(regClassName,' ');
+        gridItem[i].className = gridItem[i].className.replace(regClassName,' ');
       }
     }
   });
