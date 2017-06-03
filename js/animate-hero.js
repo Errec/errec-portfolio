@@ -7,22 +7,22 @@ var heroAnimation = (function(){
   var heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
   var TH            = false; // _transformHero() flag
 
-  //  Bind resize window event
-  window.addEventListener('resize', function(e){
-    heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
-  });
+  var _getHeroPosition = debounce(function(e){
+      heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
+    }, 200);
 
-  //  Bind scroll window event
-  window.addEventListener('scroll', function(e){
+  var _transformHero = throttle(function (e) {
     var currentYPosition = window.pageYOffset;
     if(heroYPosition - currentYPosition < 300 && TH === false) {
-      _transformHero();
+      TH = true;
+      leftHand.className  += " main-hero__left-hand--move";
+      rightHand.className += " main-hero__right-hand--move";
     }
-  }, false);
+  }, 200);
 
-  function _transformHero() {
-    TH = true;
-    leftHand.className += " main-hero__left-hand--move";
-    rightHand.className += " main-hero__right-hand--move";
-  }
+  //  Bind resize window event
+  window.addEventListener('resize', _getHeroPosition);
+
+  //  Bind scroll window event
+  window.addEventListener('scroll', _transformHero, false);
 })();
