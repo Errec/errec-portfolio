@@ -10,14 +10,14 @@ var svgHover = (function(){
 
   function _showColor(e) {
     if(e.target !== e.currentTarget) {
-      e.target.className.baseVal = e.target.className.baseVal.replace(regClassName,' ');
+      e.target.classList.value = e.target.classList.value.replace(regClassName,' ');
     }
     e.stopPropagation();
   }
 
   function _removeColor(e) {
     if(e.target !== e.currentTarget) {
-      e.target.className.baseVal += " main-skills__svg--fill";
+      e.target.classList.value += " main-skills__svg--fill";
     }
     e.stopPropagation();
   }
