@@ -1,7 +1,10 @@
 .footer
   width: 100%
+  padding: 0
+  margin: 0
   p
-    padding: 0 $padding-lr__lg $padding-bt__sm 0
+    padding: 0 $padding-lr__lg $padding-bt__md 0
+    margin: 0
     text-align: end
     font: menu
     color: $color__light
@@ -9,9 +12,8 @@
 
 .footer-fixed-bg
   height: 20vh
-  background-image: url(../img/map01.png)
-  background-repeat: no-repeat
-  background-position: center
+  width: 100%
+  background: url(../img/map01.png) no-repeat fixed
   background-color: $color__dark
-  background-size: cover
-  background-attachment: fixed
+  background-position: center 120%
+  background-size: contain
