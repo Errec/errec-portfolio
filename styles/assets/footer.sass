@@ -1,4 +1,5 @@
 .footer
+  position: relative
   width: 100%
   padding: 0
   margin: 0
@@ -17,3 +18,21 @@
   background-color: $color__dark
   background-position: center 120%
   background-size: contain
+
+.footer-pin-wrapper
+  text-align: center
+  position: absolute
+  bottom: 7vh
+  left: 0
+  right: 0
+
+.footer-pin-img
+  transition: all 0.2s ease-in-out
+  width: 85px
+  height: auto
+  padding-bottom: 2px
+  transform: rotate(15deg)
+  &:hover
+    padding-bottom: 0
+    transform: rotate(0deg)
+    width: 90px
