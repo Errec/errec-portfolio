@@ -9,7 +9,12 @@ var workGridAnimation = (function(){
   var zeroArr            = new Array(workItems.length+1).join('0').split('').map(parseFloat);
   var TW                 = zeroArr; // transformWorkGrid() flag array
 
-  var _resetItensSize = debounce(function(e){
+  //  Bind resize window event
+  window.addEventListener('resize', debounce(_resetItensSize, 500));
+  //  Bind scroll window event
+  window.addEventListener('scroll', throttle(_transformWorkGrid, 100), false);
+
+  function _resetItensSize(){
     workYPosition = workSection.getBoundingClientRect().top + window.scrollY;
     if (window.innerWidth < 720 && (TW.reduce(_add, 0)) !== 0) {
       TW = new Array(workItems.length+1).join('0').split('').map(parseFloat);
@@ -18,9 +23,9 @@ var workGridAnimation = (function(){
         gridItem[i].className = gridItem[i].className.replace(regClassName,' ');
       }
     }
-  }, 200);
+  }
 
-  var _transformWorkGrid = throttle(function(e){
+  function _transformWorkGrid(){
     var currentYPosition = window.pageYOffset;
     if (window.innerWidth < 720 && workYPosition - currentYPosition < 50 && (TW.reduce(_add, 0)) < 5) {
       workItemsYPosition = Array.from(workItems).map(function(entry) {
@@ -34,13 +39,7 @@ var workGridAnimation = (function(){
         TW[divSufix] = 1;
       }
     }
-  }, 100);
-
-  //  Bind resize window event
-  window.addEventListener('resize', _resetItensSize);
-
-  //  Bind scroll window event
-  window.addEventListener('scroll', _transformWorkGrid, false);
+  }
 
   function _add(a, b) {
       return a + b;
