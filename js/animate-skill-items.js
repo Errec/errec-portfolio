@@ -2,7 +2,7 @@ var svgHover = (function(){
   // Cache the DOM
   var svgUl = document.querySelector("#skills-grid");
 
-  var regClassName = new RegExp('(^| )'+ 'main-skills__svg--fill' +'($| )','g');
+  var regClassName = new RegExp('(^| )' + 'main-skills__svg--fill' +'($| )', 'g');
 
   //  Bind mouse events
   svgUl.addEventListener("mouseover", _showColor, false);

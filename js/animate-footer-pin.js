@@ -1,5 +1,5 @@
 var animatePin = (function() {
-  var pin    = document.getElementById('footer-pin');
+  var pin = document.getElementById('footer-pin');
 
   window.addEventListener('scroll', debounce(_checkPin, 50));
 

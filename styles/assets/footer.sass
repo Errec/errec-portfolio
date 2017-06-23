@@ -24,14 +24,14 @@
   position: absolute
   left: 50%
   top: 50%
-  transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-25%) translateY(-50%)
   text-align: center
 
 .footer__pin
-  animation: xAxis-exit 0.5s forwards
+  animation: xAxis-exit 1s forwards
   position: relative
   &:after
-    animation: yAxis-exit 0.7s cubic-bezier(0.46, 0.03, 0.6, 1.61) forwards
+    animation: yAxis-exit 1s cubic-bezier(0.45,-1.19, 0.16, 1.57) forwards
     content: ''
     display: block
     width: 80px
@@ -60,9 +60,9 @@
 
 @keyframes yAxis-exit
   99.9%
-    transform: translateY(20vh)
+    transform: translateY(22vh)
   100%
-    transform: translateY(20vh) rotate(90deg)
+    transform: translateY(22vh) rotate(90deg)
 
 @keyframes xAxis-exit
   99.9%

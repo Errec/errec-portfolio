@@ -9,7 +9,7 @@ var heroAnimation = (function(){
 
   var _getHeroPosition = debounce(function(e){
       heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;
-    }, 200);
+  }, 200);
 
   var _transformHero = throttle(function (e) {
     var currentYPosition = window.pageYOffset;
