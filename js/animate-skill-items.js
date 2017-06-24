@@ -1,6 +1,6 @@
 var svgHover = (function(){
   // Cache the DOM
-  var svgUl = document.querySelector("#skills-grid");
+  var svgUl = document.getElementById("skills-grid");
 
   var regClassName = new RegExp('(^| )' + 'main-skills__svg--fill' +'($| )', 'g');
 

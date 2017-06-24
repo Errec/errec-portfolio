@@ -11,7 +11,7 @@ var workGridAnimation = (function(){
     Array.prototype.forEach.call(workItems, function(workItem) {
         // top of the div
       var itemTop = window.scrollY - workItem.offsetTop;
-      if (itemTop > -50 & window.innerWidth < 720) {
+      if (itemTop > -100 & window.innerWidth < 720) {
         workItem.className = workItem.className.replace(regClassName,' ');
       }
     });
