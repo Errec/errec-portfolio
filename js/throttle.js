@@ -7,6 +7,8 @@
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 function throttle(func, wait, options) {
+    var FUNC_ERROR_TEXT = 'Must be a function';
+
   var leading = true,
       trailing = true;
 

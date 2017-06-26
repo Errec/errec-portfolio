@@ -8,9 +8,9 @@ var heroAnimation = (function(){
   var TH            = false; // _transformHero() flag
 
   //  Bind resize window event
-  window.addEventListener('resize', debounce(_getHeroPosition, 200));
+  window.addEventListener('resize', debounce(_getHeroPosition, 500));
   //  Bind scroll window event
-  window.addEventListener('scroll', throttle(_transformHero, 200), false);
+  window.addEventListener('scroll', throttle(_transformHero, 500), false);
 
   function _getHeroPosition(){
       heroYPosition = heroSection.getBoundingClientRect().top + window.scrollY;

@@ -2,10 +2,10 @@ var workGridAnimation = (function(){
   // Cache the DOM
   var workItems = document.querySelectorAll('.main-work__item');
 
-  var regClassName       = new RegExp('(^| )'+ 'main-work__item--grow' +'($| )','g');
+  var regClassName = new RegExp('(^| )'+ 'main-work__item--grow' +'($| )','g');
 
   //  Bind scroll window event
-  window.addEventListener('scroll', throttle(_transformWorkGrid, 100), false);
+  window.addEventListener('scroll', throttle(_transformWorkGrid, 500), false);
 
   function _transformWorkGrid(){
     Array.prototype.forEach.call(workItems, function(workItem) {

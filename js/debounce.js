@@ -7,6 +7,8 @@
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 function debounce(func, wait, options) {
+  var FUNC_ERROR_TEXT = 'Must be a function';
+
   var lastArgs,
       lastThis,
       maxWait,
@@ -17,7 +19,6 @@ function debounce(func, wait, options) {
       leading = false,
       maxing = false,
       trailing = true;
-
   if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
