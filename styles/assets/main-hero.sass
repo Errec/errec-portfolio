@@ -1,17 +1,20 @@
 .main-hero
-  display: block
-  margin-top: 160px
+  padding-bottom: 55%
   background-color: $color__light
+  width: 100%
+  position: relative
+  display: block
+  margin-top: 15vh
   &:after
     content: ""
     display: table
     clear: both
 
 .main-hero__left-hand
-  margin-top: -8%
-  margin-left: -8%
-  transform: rotate(5deg)
-  float: left
+  position: absolute
+  left: 0
+  top: 0
+  transform: rotate(5deg) translateX(-23%) translateY(-10%)
   max-width: 38%
   transition: transform 1s ease-in-out, margin 1s cubic-bezier(0.12, -0.42, 0.9, 1.17);
   img
@@ -19,15 +22,13 @@
     height: 100%
 
 .main-hero__left-hand--move
-  transform: rotate(-5deg)
-  margin-top: -4%
-  margin-left: -2%
+  transform: rotate(-5deg) translateX(0) translateY(-8%)
 
 .main-hero__right-hand
-  margin-top: -18%
-  margin-right: -10%
-  transform: rotate(-1deg)
-  float: right
+  position: absolute
+  transform: rotate(-1deg) translateX(16%) translateY(-40%)
+  right: 0
+  top: 0
   max-width: 65%
   transition: transform 1s ease-in-out, margin 1s cubic-bezier(0.12, -0.42, 0.9, 1.17);
   img
@@ -35,6 +36,4 @@
     height: 100%
 
 .main-hero__right-hand--move
-  transform: rotate(5deg)
-  margin-top: -7%
-  margin-right: -6%
+  transform: rotate(5deg) translateX(8%) translateY(-25%)
