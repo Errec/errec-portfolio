@@ -5,13 +5,13 @@ var workGridAnimation = (function(){
   var regClassName = new RegExp('(^| )'+ 'main-work__item--grow' +'($| )','g');
 
   //  Bind scroll window event
-  window.addEventListener('scroll', throttle(_transformWorkGrid, 500), false);
+  window.addEventListener('scroll', throttle(_transformWorkGrid, 400), false);
 
   function _transformWorkGrid(){
     Array.prototype.forEach.call(workItems, function(workItem) {
         // top of the div
       var itemTop = window.scrollY - workItem.offsetTop;
-      if (itemTop > -100 & window.innerWidth < 720) {
+      if (itemTop > -120 & window.innerWidth < 720) {
         workItem.className = workItem.className.replace(regClassName,' ');
       }
     });
