@@ -125,25 +125,24 @@
   .footer
     text-align: center
     padding: 4vh 0 0 0
-    p
-      padding: 0 0 $padding-bt__sm 0
-      text-align: center
+  .footer__text
+    color: $color__dark
+    bottom: -10%
+    right: 0
+    left: 0
+    padding: 0 0 $padding-bt__sm 0
+    font-size: 1.6rem
+    text-align: center
 
   .footer-fixed-bg
-    background: url(../img/map01.png) no-repeat fixed
-    background-color: $color__dark
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    background:
+      position: center bottom
+      size: auto auto
 
   .footer__pin-wrapper
-    top: 55%
-
-  .footer__pin
-    &:after
-      width: 60px
-      height: 60px
+    top: 60%
+    width: 50px
+    height: 50px
 
   @keyframes xAxis-enter
     0%

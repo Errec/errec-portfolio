@@ -1,7 +1,7 @@
 var animatePin = (function() {
   var pin = document.getElementById('footer-pin');
 
-  window.addEventListener('scroll', debounce(_checkPin, 100));
+  window.addEventListener('scroll', throttle(_checkPin, 100));
 
   function _checkPin() {
     var currentPosition = (window.scrollY + window.innerHeight);
