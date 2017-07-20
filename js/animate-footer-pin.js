@@ -7,7 +7,7 @@ var animatePin = (function() {
     var currentPosition = (window.scrollY + window.innerHeight);
     var totalHeight     = document.documentElement.offsetHeight;
 
-    totalHeight - currentPosition <= 15 ?
+    totalHeight - currentPosition <= 10 ?
     pin.classList.add('footer__pin--enter') : pin.classList.remove('footer__pin--enter');
   }
 })();
