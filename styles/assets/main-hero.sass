@@ -12,17 +12,19 @@
 
 .main-hero__left-hand
   width: 65%
+  height: 100%
   position: absolute
   left: 0
   top: 0
-  transform: rotate(25deg) translateX(-35%) translateY(-2%)
+  // transform: rotate(25deg) translateX(-35%) translateY(-2%)
+  transform: rotate(15deg) translateX(-20%) translateY(0%)
   transition: transform 1s ease-in-out, margin 1s cubic-bezier(0.12, -0.42, 0.9, 1.17);
   img
     width: 100%
     height: 100%
 
 .main-hero__left-hand--move
-  transform: rotate(15deg) translateX(-20%) translateY(0%)
+  // transform: rotate(15deg) translateX(-20%) translateY(0%)
 
 .main-hero__right-hand
   width: 65%
@@ -37,3 +39,48 @@
 
 .main-hero__right-hand--move
   transform: rotate(5deg) translateX(8%) translateY(-25%)
+
+.main-hero__left-hand
+  // background-color: yellow
+
+.main-hero__boxes
+  padding: 0 2%
+  position: absolute
+  width: 23%
+  height: 86%
+  // background-color: rgba(210, 105, 30, .5)
+  top: 2%
+  left: 39%
+  transform-style: preserve-3d
+  transform: translateY(-40px) translateX(-40px) rotateX(50deg) rotateZ(-25deg) rotateY(-85deg)
+.main-hero__box-wrapper
+  transform-style: preserve-3d
+.hero__box
+  display: block
+  margin-bottom: 40%
+  background-color: #292929
+  transform-style: preserve-3d
+  text-align: center
+  line-height: 1
+  padding: 0.8rem
+  font-size: 4rem
+
+  &:after, &:before
+    content: ""
+    position: absolute
+  &:before
+    transform: rotateY(90deg) translateX(-100%)
+    transform-origin: 0 100%
+    left: 0px
+    bottom: 0px
+    height: 102%
+    width: 14.5%
+    background-color: #1D1D1D
+  &:after
+    background-color: #363636
+    transform: rotateX(90deg)
+    transform-origin: 0 0
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 30%
