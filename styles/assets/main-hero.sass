@@ -55,7 +55,6 @@
 .hero__box
   line-height: 1
   padding: 4%
-  padding: 0
   font-size: 3vw
   position: absolute
   margin: 0 0 0 20%
@@ -74,11 +73,11 @@
     bottom: 0px
     height: 100%
     width: 17.5%
-    background-color: #1D1D1D
-    // background-color: green
+    background-color: green
+    // background-color: #1D1D1D
   &:after
-    // background-color: red
-    background-color: #535353
+    background-color: red
+    // background-color: #535353
     transform: rotateX(90deg)
     transform-origin: 0 0
     left: 0px
@@ -95,12 +94,13 @@
 .hero__box-0
   top: 0
 .hero__box-1
+  top: 20%
   font-size: 6vw
   padding-top: 3%
   padding-right: 10%
-  left: 40%
-  top: 20%
+  left: 0%
 .hero__box-2
+  right: 0
   top: 40%
   &:before
     width: 25.5%
@@ -116,3 +116,10 @@
   left: 40%
 .hero__box-5
   top: 100%
+
+.hero__box--state-0
+  background-color: transparent
+  transform: translateX(-25%)
+  &:after, &:before
+    width: 0
+    height: 0
