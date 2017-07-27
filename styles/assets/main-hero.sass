@@ -15,14 +15,15 @@
   position: absolute
   left: 0
   top: 0
-  transform: rotate(25deg) translateX(-35%) translateY(-2%)
+  transform: rotate(15deg) translateX(-20%) translateY(0%) // REMOVE
+  // transform: rotate(25deg) translateX(-35%) translateY(-2%)
   transition: transform 1s ease-in-out, margin 1s cubic-bezier(0.12, -0.42, 0.9, 1.17);
   img
     width: 100%
     height: 100%
 
-.main-hero__left-hand--move
-  transform: rotate(15deg) translateX(-20%) translateY(0%)
+// .main-hero__left-hand--move
+//   transform: rotate(15deg) translateX(-20%) translateY(0%)
 
 .main-hero__right-hand
   width: 65%
@@ -39,14 +40,16 @@
   transform: rotate(5deg) translateX(8%) translateY(-25%)
 
 .main-hero__boxes
-  padding: 6% 4% 0 4%
+  padding: 0 4% 0 4%
   position: absolute
   width: 23%
   height: 86%
   top: 2%
   left: 39%
   transform-style: preserve-3d
-  transform: translateY(-40px) translateX(-40px) rotateX(59deg) rotateZ(-25deg) rotateY(-85deg)
+  // transform: translateY(-10%) translateX(-25%) rotateX(59deg) rotateZ(-25deg) rotateY(-85deg)
+  transform: translateY(-10%) translateX(-25%) rotateX(45deg) rotateZ(-36deg) rotateY(-85deg)
+
 .main-hero__box-wrapper
   position: relative
   width: 100%
@@ -61,7 +64,7 @@
   height: 10%
   display: inline-block
   margin-bottom: 35%
-  // background-color: #292929
+  background-color: #292929
   transform-style: preserve-3d
   &:after, &:before
     content: ""
@@ -72,7 +75,6 @@
     left: 0px
     bottom: 0px
     height: 100%
-    width: 17.5%
     // background-color: green
     background-color: #1D1D1D
   &:after
@@ -86,46 +88,50 @@
     height: 38%
 
 .hero__box--small
-  width: 40%
+  width: 50%
   text-align: center
   &:before
     width: 32.5%
 .hero__box-0
-  top: 0
+  left: 10%
+  top: 15%
 .hero__box-1
-  top: 20%
+  top: 35%
   font-size: 6vw
   padding-top: 3%
   padding-right: 10%
   left: 0%
 .hero__box-2
   right: 0
-  top: 40%
+  top: 54%
   &:before
     width: 25.5%
 .hero__box-3
-  top: 60%
+  top: 70%
+  left: -10%
   &:before
     width: 23.5%
 .hero__box-4
   padding-top: 3%
   padding-left: 10%
   font-size: 6vw
-  top: 80%
-  left: 40%
+  top: 85%
+  left: 5%
 .hero__box-5
+  left: -15%
   top: 100%
 
 .hero__box--state-0
   .hero__box
-    transform: translateX(-25%)
+    background-color: transparent
+    transform: translateX(-40%)
     &:after, &:before
       width: 0
       height: 0
 
 .hero__box--state-1
   .hero__box
-    transform: translateX(400%)
+    transform: translateY(300%) translateX(400%)
     background-color: #292929
     &:after
       width: 100%
