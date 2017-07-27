@@ -53,10 +53,14 @@
   height: 100%
   transform-style: preserve-3d
 .hero__box
+  line-height: 1
+  padding: 4%
+  padding: 0
+  font-size: 3vw
   position: absolute
   margin: 0 0 0 20%
   height: 10%
-  width: 80%
+  display: inline-block
   margin-bottom: 35%
   background-color: #292929
   transform-style: preserve-3d
@@ -70,9 +74,11 @@
     bottom: 0px
     height: 100%
     width: 17.5%
-    background-color: green
+    background-color: #1D1D1D
+    // background-color: green
   &:after
-    background-color: red
+    // background-color: red
+    background-color: #535353
     transform: rotateX(90deg)
     transform-origin: 0 0
     left: 0px
@@ -80,22 +86,33 @@
     width: 100%
     height: 38%
 
+.hero__box--large
 .hero__box--small
   width: 40%
+  text-align: center
   &:before
     width: 32.5%
 .hero__box-0
   top: 0
 .hero__box-1
+  font-size: 6vw
+  padding-top: 3%
+  padding-right: 10%
   left: 40%
   top: 20%
 .hero__box-2
   top: 40%
+  &:before
+    width: 25.5%
 .hero__box-3
   top: 60%
+  &:before
+    width: 23.5%
 .hero__box-4
+  padding-top: 3%
+  padding-left: 10%
+  font-size: 6vw
   top: 80%
   left: 40%
 .hero__box-5
   top: 100%
-.hero__box--large
