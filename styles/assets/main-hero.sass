@@ -15,15 +15,14 @@
   position: absolute
   left: 0
   top: 0
-  transform: rotate(15deg) translateX(-20%) translateY(0%) // REMOVE
-  // transform: rotate(25deg) translateX(-35%) translateY(-2%)
+  transform: rotate(25deg) translateX(-35%) translateY(-2%)
   transition: transform 1s ease-in-out, margin 1s cubic-bezier(0.12, -0.42, 0.9, 1.17);
   img
     width: 100%
     height: 100%
 
-// .main-hero__left-hand--move
-//   transform: rotate(15deg) translateX(-20%) translateY(0%)
+.main-hero__left-hand--move
+  transform: rotate(15deg) translateX(-20%) translateY(0%)
 
 .main-hero__right-hand
   width: 65%
@@ -47,7 +46,6 @@
   top: 2%
   left: 39%
   transform-style: preserve-3d
-  // transform: translateY(-10%) translateX(-25%) rotateX(59deg) rotateZ(-25deg) rotateY(-85deg)
   transform: translateY(-10%) translateX(-25%) rotateX(45deg) rotateZ(-36deg) rotateY(-85deg)
 
 .main-hero__box-wrapper
@@ -56,6 +54,7 @@
   height: 100%
   transform-style: preserve-3d
 .hero__box
+  transition: all 1.3s ease-in-out 0.2s
   line-height: 1
   padding: 4%
   font-size: 3vw
@@ -67,13 +66,14 @@
   background-color: #292929
   transform-style: preserve-3d
   &:after, &:before
+    transition: all 1s ease-in-out
     content: ""
     position: absolute
   &:before
     transform: rotateY(90deg) translateX(-100%)
     transform-origin: 0 100%
-    left: 0px
-    bottom: 0px
+    left: 0
+    bottom: 0
     height: 100%
     // background-color: green
     background-color: #1D1D1D
@@ -85,13 +85,10 @@
     left: 0px
     top: 0px
     width: 100%
-    height: 38%
 
 .hero__box--small
   width: 50%
   text-align: center
-  &:before
-    width: 32.5%
 .hero__box-0
   left: 10%
   top: 15%
@@ -104,13 +101,9 @@
 .hero__box-2
   right: 0
   top: 54%
-  &:before
-    width: 25.5%
 .hero__box-3
   top: 70%
   left: -10%
-  &:before
-    width: 23.5%
 .hero__box-4
   padding-top: 3%
   padding-left: 10%
@@ -125,26 +118,23 @@
   .hero__box
     background-color: transparent
     transform: translateX(-40%)
-    &:after, &:before
-      width: 0
+    &:after
       height: 0
+    &:before
+      width: 0
 
 .hero__box--state-1
   .hero__box
     transform: translateY(300%) translateX(400%)
     background-color: #292929
     &:after
-      width: 100%
       height: 38%
-    &:before
-      height: 100%
-      width: 17.5%
   .hero__box--small
     &:before
       width: 32.5%
   .hero__box-2
     &:before
-      width: 25.5%
+      width: 26.5%
   .hero__box-3
     &:before
-      width: 23.5%
+      width: 24.5%
