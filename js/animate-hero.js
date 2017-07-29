@@ -6,7 +6,7 @@ var heroAnimation = (function(){
   var heroSection = document.getElementById('hero');
 
   var _transformHero = throttle(function() {
-      var currentPosition = ((window.scrollY + window.innerHeight) - heroSection.clientHeight / 2);
+      var currentPosition = ((window.scrollY + window.innerHeight) - heroSection.clientHeight / 1.5);
       if(currentPosition > heroSection.offsetTop) {
         leftHand.className   += " main-hero__left-hand--move";
         rightHand.className  += " main-hero__right-hand--move";
