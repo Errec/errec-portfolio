@@ -1,5 +1,7 @@
 .main-about
-  padding: 0 $padding-lr__lg $padding-bt__lg $padding-lr__lg
+  overflow: hidden
+  position: relative
+  padding: 0 $padding-lr__lg $padding-bt__lg*8 $padding-lr__lg
   display: flex
   justify-content: space-between
   > *
@@ -62,3 +64,17 @@
   margin: 0
   padding: 0 20px 0 0
   float: left
+
+.main-about__paralax-wrapper
+  pointer-events: none
+  bottom: 0
+  left: 0
+  padding: 0
+  margin: 0
+  position: absolute
+  width: 100%
+
+.main-about__paralax-img
+  width: 100%
+  height: auto
+  // transform: translateY(100%)

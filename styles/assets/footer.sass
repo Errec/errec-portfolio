@@ -1,10 +1,12 @@
 .footer
+  height: 35vh
+  z-index: 2000
   overflow: hidden
-  position: relative
+  position: absolute
   width: 100%
   padding: 0
   margin: 0
-
+  bottom: 0
 .footer__text
   text-shadow: 2px 2px black
   line-height: 1
@@ -17,15 +19,7 @@
   font-weight: bold
 
 .footer-fixed-bg
-  height: 35vh
   width: 100%
-  background:
-    image: url(../img/foot-bg.png)
-    repeat: no-repeat
-    attachment: fixed
-    color: $color__dark
-    position: center 102%
-    size: 100% auto
 
 .footer__pin-wrapper
   cursor: pointer
@@ -74,9 +68,9 @@
 
 @keyframes yAxis-exit
   99.9%
-    transform: translateY(40vh)
+    transform: translateY(50vh)
   100%
-    transform: translateY(40vh) rotate(90deg)
+    transform: translateY(50vh) rotate(90deg)
 
 @keyframes xAxis-exit
   99.9%

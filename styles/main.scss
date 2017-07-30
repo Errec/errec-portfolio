@@ -23,6 +23,12 @@ h1, h2, h3, h4
   -webkit-margin-start: 0px
   -webkit-margin-end: 0px
 
+body
+  position: relative
+
+.main
+  z-index: 1000
+
 @import 'assets/header.sass'
 @import 'assets/main-slogan.sass'
 @import 'assets/main-hero.sass'
