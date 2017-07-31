@@ -24,7 +24,7 @@
     height: 100%
 
 .main-hero__left-hand--move
-  transform: rotate(15deg) translateX(-20%) translateY(0%)
+  transform: rotate(15deg) translate3d(-20%, 0%, 0)
 
 .main-hero__right-hand
   width: 65%
@@ -38,7 +38,7 @@
     height: 100%
 
 .main-hero__right-hand--move
-  transform: rotate(5deg) translateX(8%) translateY(-25%)
+  transform: rotate(5deg) translate3d(8%,-25%,0)
 
 .main-hero__boxes
   padding: 0 4% 0 4%
@@ -69,6 +69,7 @@
   background-color: #292929
   transform-style: preserve-3d
   &:after, &:before
+    backface-visibility: hidden
     transition: all 1s ease-in-out 0.1s
     content: ""
     position: absolute
@@ -78,12 +79,10 @@
     left: 0
     bottom: 0
     height: 100%
-    // background-color: green
     background-color: #1D1D1D
   &:after
-    // background-color: red
     background-color: #535353
-    transform: rotateX(90deg)
+    transform: rotateX(-90deg) translateY(-100%)
     transform-origin: 0 0
     left: 0px
     top: 0px
@@ -124,6 +123,7 @@
 
 .hero__box--state-0
   .hero__box
+    will-change: transform
     background-color: transparent
     transform: translateX(-40%)
     &:after
@@ -133,7 +133,7 @@
 
 .hero__box--state-1
   .hero__box
-    transform: translateY(400%) translateX(500%)
+    transform: translate3d(500%,400%,0);
     background-color: #292929
     &:after
       height: 38%

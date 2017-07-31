@@ -9,7 +9,7 @@ var parallax = (function() {
     if(isTopShow) {
       percentFromBotttom = 200 *  (slideInAt - about.offsetTop) / about.clientHeight;
       newTranslate = percentFromBotttom;
-      parallaxImg.style.transform = "translateY(-" + (newTranslate) + "%)";
+      parallaxImg.style.transform = "translate3d(0,-" + newTranslate +"%,0)";
     }
   }
    window.addEventListener('scroll', _checkAboutHeight);
