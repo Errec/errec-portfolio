@@ -33,13 +33,11 @@ var onError = function(err) {
 gulp.task('styles', function() {
   gulp.src('styles/*.scss')
   .pipe(plumber({ errorHandler: onError }))
-  .pipe(sourcemaps.init())
   .pipe(sass({indentedSyntax: true}))
   .pipe(autoprefixer({
     browsers: ['last 5 versions'],
     cascade: false}))
   .pipe(cleanCSS())
-  .pipe(sourcemaps.write('.'))
   .pipe(rename({ suffix: '.min'}))
   .pipe(gulp.dest('build/css'));
 });
@@ -54,10 +52,8 @@ gulp.task('templates', function() {
 gulp.task('scripts', function() {
   return gulp.src(jsFiles)
   .pipe(plumber({ errorHandler: onError }))
-  .pipe(sourcemaps.init())
   .pipe(concat('bundle.js'))
   .pipe(uglify())
-  .pipe(sourcemaps.write('.'))
   .pipe(rename({ suffix: '.min'}))
   .pipe(gulp.dest('build/js'));
 });
