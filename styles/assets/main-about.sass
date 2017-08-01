@@ -56,14 +56,28 @@
   padding: 0
   list-style: none
 
-.fa
-  font-size: 36px
-  color: $color__light
-
 .main-about__icon-list
-  margin: 0
-  padding: 0 20px 0 0
+  width: 38px
+  height: 38px
+  margin-right: 20px
   float: left
+  &:last-child
+    margin-right: 0
+  a
+    width: 100%
+    height: 100%
+  &:hover
+    .main-about__social-icon
+      fill: #4F4F4F
+
+.main-about__social-icon-svg
+  display: block
+  width: 100%
+  height: 100%
+
+.main-about__social-icon
+  transition: ease-in-out 0.2s
+  fill: $color__light
 
 .main-about__paralax-wrapper
   pointer-events: none
