@@ -1,4 +1,4 @@
-# Personal portfolio <a><img src="http://res.cloudinary.com/dt4qeehms/image/upload/v1501770970/logo_zv1dma.svg" height="50" align="right"></a>
+# Personal portfolio <a><img src="http://res.cloudinary.com/dt4qeehms/image/upload/v1501770970/logo_zv1dma.svg" height="40" align="right"></a>
 http://errec.surge.sh/
 
 ## About
@@ -14,7 +14,7 @@ This is the second version of my personal portfolio, rebuilt one year later. The
 * Image minify [TinyPNG](https://tinypng.com/)
 * Favicon build in (faviconit)[faviconit.com]
 * Task runner: Gulp
-* Boiler plate: I'm using (mine)[https://github.com/Errec/pug-sass-boilerplate-starter-kit], a modified version from HTML5BP for Pug
+* Boiler plate: I'm using [mine](https://github.com/Errec/pug-sass-boilerplate-starter-kit), a modified version from HTML5BP for Pug
 * Debug: Chrome DevTools
 * Tests: Chrome, Firefox, Chrome Mobile
 * OS: Linux( Mint, shell Zsh)
