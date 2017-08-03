@@ -4,11 +4,11 @@ section.main-about__personal-info
   p This site and the Work section ones were designed and built by hand from the ground up. Check out the code on my Github.
 section.main-about__contact
   h3 HEY!
-  form.main-about__form(method="POST" action="http://formspree.io/errecme@gmail.com")
-    input.main-about__input.field-input(type="email" name="email" placeholder="E-MAIL")
+  form#about-form.main-about__form(method="POST" action="http://formspree.io/errecme@gmail.com")
+    input#input-email.main-about__input.field-input(type="email" name="email" placeholder="E-MAIL")
     input.main-about__input.field-input(type="text" name='name' placeholder="NAME")
-    textarea.main-about__input.textarea-input(name="message" placeholder="YOUR MESSAGE")
-    button.main-about__input.send-btn(type="submit") Send
+    textarea#input-message.main-about__input.textarea-input(name="message" placeholder="YOUR MESSAGE")
+    button#input-btn.main-about__input.send-btn(type="button" value="submit" onclick="runMyFunction()") Send
 section.main-about__social
   h3 SOCIAL
   ul.main-about__icon-row
