@@ -6,6 +6,6 @@ var parallax = (function() {
   var isHalfShown = slideInAt > about.offsetTop;
 
   if(isHalfShown) {
-    parallaxImg.style.transform = "translateY(=50%)";
+    parallaxImg.style.transform = "translateY(50%)";
   }
 })();
