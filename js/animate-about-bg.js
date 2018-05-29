@@ -6,7 +6,7 @@ var parallaxAboutBg = (function() {
   window.addEventListener('scroll', _checkAboutHeight);
 
   function _checkAboutHeight() {
-    var slideInAt = (window.scrollY + window.innerHeight) - about.clientHeight / 2;
+    var slideInAt = (window.scrollY + window.innerHeight) - about.clientHeight / 1.2;
     var isHalfShown = slideInAt > about.offsetTop;
     if(isHalfShown) {
       parallaxAboutBgImg.style.transform = "translate3d(0, -100%, 0)";
